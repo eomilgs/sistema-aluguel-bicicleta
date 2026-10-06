@@ -11,8 +11,8 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <mapping class="br.edu.exemplo.aluguel.model.Cliente"/>
-        <mapping class="br.edu.exemplo.aluguel.model.Bicicleta"/>
-        <mapping class="br.edu.exemplo.aluguel.model.Aluguel"/>
+        <mapping class="br.edu.trabalho.aluguel.model.Cliente"/>
+        <mapping class="br.edu.trabalho.aluguel.model.Bicicleta"/>
+        <mapping class="br.edu.trabalho.aluguel.model.Aluguel"/>
     </session-factory>
 </hibernate-configuration>
