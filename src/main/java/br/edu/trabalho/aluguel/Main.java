@@ -1,9 +1,10 @@
 package br.edu.trabalho.aluguel;
 
 import br.edu.trabalho.aluguel.config.HibernateUtil;
-import br.edu.trabalho.aluguel.dao.AluguelDao;
-import br.edu.trabalho.aluguel.dao.BicicletaDao;
-import br.edu.trabalho.aluguel.dao.ClienteDao;
+
+import br.edu.trabalho.aluguel.dao.AluguelDAO;
+import br.edu.trabalho.aluguel.dao.BicicletaDAO;
+import br.edu.trabalho.aluguel.dao.ClienteDAO;
 import br.edu.trabalho.aluguel.model.Aluguel;
 import br.edu.trabalho.aluguel.model.Bicicleta;
 import br.edu.trabalho.aluguel.model.Cliente;
@@ -17,9 +18,9 @@ import java.util.Scanner;
 
 public class Main {
     private static final DateTimeFormatter FORMATO_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    private static final ClienteDao clienteDao = new ClienteDao();
-    private static final BicicletaDao bicicletaDao = new BicicletaDao();
-    private static final AluguelDao aluguelDao = new AluguelDao();
+    private static final ClienteDAO clienteDao = new ClienteDAO();
+    private static final BicicletaDAO bicicletaDao = new BicicletaDAO();
+    private static final AluguelDAO aluguelDao = new AluguelDAO();
     private static final AluguelService aluguelService = new AluguelService();
     private static final Scanner entrada = new Scanner(System.in);
 
@@ -156,4 +157,4 @@ public class Main {
     private static LocalDate lerData(String mensagem) {
         while (true) { try { return LocalDate.parse(lerTexto(mensagem), FORMATO_DATA); } catch (DateTimeParseException e) { System.out.println("Digite a data no formato dd/MM/aaaa."); } }
     }
-    private static String mensagemAmigavel(Exception e) { return e.getMessage() == null ? "erro ao acessar os dados." : e.getMessage(); }
+    private static String mensagemAmigavel(Exception e) { return e.getMessage() == null ? "erro ao acessar os dados." : e.getMessage(); }}
