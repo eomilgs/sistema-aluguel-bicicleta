@@ -1,5 +1,7 @@
 package br.edu.trabalho.aluguel.dao;
 
+import br.edu.trabalho.aluguel.config.HibernateUtil;
+import br.edu.trabalho.aluguel.model.Cliente;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
