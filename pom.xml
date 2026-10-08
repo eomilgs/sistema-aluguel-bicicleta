@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.edu.trabalho</groupId>
+    <groupId>br.edu.exemplo</groupId>
     <artifactId>sistema-aluguel-bicicletas</artifactId>
     <version>1.0.0</version>
 
@@ -14,11 +14,13 @@
     </properties>
 
     <dependencies>
+        <!-- ORM usado diretamente, sem Spring Data. -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>6.6.5.Final</version>
         </dependency>
+        <!-- O dialeto do SQLite fica no projeto de dialetos da comunidade. -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-community-dialects</artifactId>
